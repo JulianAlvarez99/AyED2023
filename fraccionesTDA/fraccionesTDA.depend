@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1679469056 source:f:\usuarios\alumno\escritorio\ayed\guia 1\fraccionestda\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fraction_operations.h"
+
+1679469827 source:f:\usuarios\alumno\escritorio\ayed\guia 1\fraccionestda\fraction_operations.c
+	<stdio.h>
+	<stdlib.h>
+	"fraction_operations.h"
+
+1679468215 f:\usuarios\alumno\escritorio\ayed\guia 1\fraccionestda\fraction_operations.h
+

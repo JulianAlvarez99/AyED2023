@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1584205420 source:f:\usuarios\alumno\escritorio\ayed\guia 1\tdavectores\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1681492133 source:c:\users\asusx\onedrive\escritorio\ayed\tdavectores\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"Vector_func.h"
+
+1681492097 source:c:\users\asusx\onedrive\escritorio\ayed\tdavectores\vector_func.c
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+	"Vector_func.h"
+
+1681446084 c:\users\asusx\onedrive\escritorio\ayed\tdavectores\vector_func.h
+
