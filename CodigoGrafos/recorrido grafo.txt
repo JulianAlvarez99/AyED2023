@@ -1,0 +1,45 @@
+list* graph_vertex_adjacent_list(graph* g, int v)
+
+#define t_elem_list int 
+
+void stack_print(stack* s)
+{
+	if(!stack_isempty(s))
+	{
+	int n = pop(s);
+	stack_print(s);
+	print("%d",n);
+	push(s,n);
+	}
+	else
+	{
+	print("\n");
+	}
+}
+
+void print_path(graph* g, int origin, int destiny, int visit[], stack* s, void prt(stack*))
+{
+v[origin] = 1;
+push(s,origin);
+
+	if(origin != destiny)
+	{
+	list* aux = graph_vertex_adjacent_list(g,0);
+
+		while(!list_isempty(aux))
+		{
+			int actual = list_remove(aux,0);
+		
+				if(v[actual] == 0)
+				{
+					print_path(g,actual,destiny,v);	
+				}
+		}
+	}
+	else
+	{
+		prt(s);
+	}
+	pop(s,origin);
+	v[origin] = 0;
+}
