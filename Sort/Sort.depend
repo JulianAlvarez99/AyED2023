@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1682615918 source:c:\users\asusx\onedrive\escritorio\ayed\sort\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

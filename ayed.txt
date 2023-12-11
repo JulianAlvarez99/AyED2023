@@ -1,0 +1,15 @@
+colicion que dos entradas den la misma salida
+
+si se disminuyen la cantidad de coliciones se el tiempo de busqueda
+
+Hash table 
+tiene estas funciones:
+insert (key, value)
+remove (key)
+get (key)
+
+Lo que caracteriza a una hash table son sus parametros
+
+una funcion hash table  
+
+es una implementacion de una estructura llamada diccionario

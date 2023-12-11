@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1686171275 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack_static.h"
+	"queue_static.h"
+	"sll_dinamic.h"
+	"search_bt.h"
+	"temperature_sensor.h"
+
+1686170545 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\queue_static.c
+	<stdio.h>
+	<stdlib.h>
+	"queue_static.h"
+	"search_bt.h"
+
+1686170876 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\stack_static.c
+	<stdio.h>
+	<stdlib.h>
+	"stack_static.h"
+	"temperature_sensor.h"
+
+1686076004 c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\stack_static.h
+	"temperature_sensor.h"
+
+1686170259 c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\queue_static.h
+	"temperature_sensor.h"
+	"search_bt.h"
+
+1685301030 c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\temperature_sensor.h
+
+1686168774 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\temperature_sensor.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"temperature_sensor.h"
+	"stack_static.h"
+
+1686171785 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\sll_dinamic.c
+	<stdio.h>
+	<stdlib.h>
+	"sll_dinamic.h"
+
+1685141209 c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\sll_dinamic.h
+	"stack_static.h"
+
+1686169994 source:c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\search_bt.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"search_bt.h"
+
+1686169983 c:\users\asusx\onedrive\escritorio\ayed\entregable5-alvarez\search_bt.h
+	"temperature_sensor.h"
+	"stack_static.h"
+
