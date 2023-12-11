@@ -1,0 +1,66 @@
+#define t_btn_elem int
+
+typedef struct _btn
+{
+	t_btn_elem value;
+	struct _btn *left;
+	struct _btn *right;
+}btn;
+
+
+==================================================
+
+void balance (btn** node)
+{
+	if(*node == NULL)return;
+
+	int bf = balanceFactor(*node);
+
+	if(bf <= -2)
+	{
+		if(balanceFactor((*node)->right) > 0) 	// Si el factor de balanceo del hijo derecho es mayor a 0, roto a la derecha el hijo derecho
+		{					// y luego roto a la izquierda el nodo
+			rightRotation(&(*node)->right);
+		}
+		leftRotation(node);
+
+	else if(bf >= 2)
+	{
+		if(balanceFactor((*node)->left) < 0)	// si el factor de balanceo del hijo izquierdo es menor a 0, roto a la izquierda el hijo 
+		{					// izquierdo y luego roto a la derecha el nodo
+			leftRotation(&(*node)->left);
+		}
+		rightRotation(node);	
+	}
+
+	if(abs(balanceFactor(*node))>1)			// si el valor absoluto del factor de balanceo del nodo es mayor a 1, se llama de nuevo a la 
+	{						// funcion para volver a balancear, hasta que la condicion se cumpla
+		balance(node);
+	}
+}
+
+==================================================
+
+void copy_btn_in_avl(btn* root_btn, btn** avl)
+{
+	if(root_btn == NULL)return;
+	
+	*avl = createNode(root_btn->value);
+	copy_btn_in_avl(root_btn->left, &(*avl)->left);
+	copy_btn_in_avl(root_btn->right, &(*avl)->right);
+
+	balance(avl);					// como  es una funcion recursiva, cuando se cargue el ultimo nodo, comenzará a balancearse 
+}							// desde el ultimo nodo hacia la raiz. Funcion en pre-order
+
+==================================================
+
+void convertABBToAVL(btn* raiz_ABB, btn** raiz_AVL)
+{
+	if(raiz_ABB == NULL) return;
+	
+	if(raiz_AVL == NULL)
+	{
+		copy_btn_in_avl(raiz_ABB, raiz_AVL);
+	}
+
+}

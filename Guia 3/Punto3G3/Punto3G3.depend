@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1680232866 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guia 3\punto3g3\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,69 @@
+typedef struct _matrix
+{
+	void** m;
+	int row;
+	int cols;
+}matrix_t;
+
+typedef struct _list 
+{
+	int vertex_index;
+	int weight;
+	struct _list *next;	
+}list_t;
+
+typedef struct _vec
+{
+	void** str;
+	list_t* sublist;
+}vector_t;
+
+typedef struct _graph_matrix 
+{
+	matrix_t* ady_matrix;
+	vector_t* vertex_list;
+	int vertex;	
+}graph_matrix;
+
+typedef struct 
+{
+	vector_t* ady_list;
+	int vertex;
+}graph_list;
+
+
+/*
+int is_subgraph (graph_matrix* g1, graph_list* g2)
+{
+if(!g1&&!g2)return 0;
+
+int result = 0;
+
+if(g2->vertex <= g1->vertex)
+{
+int row = 0;
+list_t* aux_list = g2->ady_list[row]->sublist;
+
+	while(rows <= g2->vertex && g1->ady_matrix[rows][aux_list->vertex_index] == aux_list->weight) // BUSCO QUE LOS ARCOS DE GRAFO LISTA, ESTEN EN EL GRAFO MATRIZ
+	{
+		if(aux_list->next != NULL)
+		{
+			aux_list = aux_list->next;
+		}
+		else
+		{
+			row++;
+			if(rows <= g2->vertex)
+			{
+				aux_list = g2->ady_list[rows]->sublist;
+			}
+		}	
+	}
+	if(g1->ady_matrix[rows][aux_list->vertex_index] == aux_list->weight))
+	{
+		result = 1;
+	}
+}
+
+return result;
+}

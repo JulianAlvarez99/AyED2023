@@ -1,0 +1,47 @@
+typedef struct _btn
+{
+t_elem_btn value;
+struct _btn* left;
+struct _btn* right;
+
+}btn;
+
+#define t_queue_elem void*
+#define t_elem_btn char*
+
+queue* enqueue_tree(btn* root)
+{
+if(root == NULL)return;
+
+queue* visit = queue_new();
+queue* queue_breadth = queue_new();
+
+enqueue(visit, (btn*)root);
+
+while(!queue_isempty(visit))
+{
+	root = (btn*)dequeue(visit)
+	enqueue(queue_breadth,(t_elem_btn)root->value);
+	
+	if(root->right != NULL)
+	{
+	enqueue(visit, (btn*)root->right);
+	}
+	if(root->left != NULL)
+	{
+	enqueue(visit, (btn*)root->left);
+	}
+}
+queue_free(visit);
+
+return queue_breadth;
+}
+
+Lo otro que falta considerar es que la queue de salida no debe apuntar a nodos, debe apuntar a valores. 
+El define no es correcto: sintácticamente el * no puede estar delante del tipo de dato. Por otra parte en t_queue_elem no puede ser puntero al nodo del árbol. Debe ser void*
+
+
+floyd
+kruskal
+djikstra
+vertice madre

@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1686338673 source:c:\users\asusx\onedrive\escritorio\ayed\grafos\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1686852090 source:c:\users\asusx\onedrive\escritorio\ayed\grafos\tdamatrix.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TDAMatrix.h"
+
+1686852342 c:\users\asusx\onedrive\escritorio\ayed\grafos\tdamatrix.h
+
+1686852090 source:c:\users\asusx\onedrive\escritorio\ayed\grafos\tdavector.c
+	"TDAVector.h"
+
+1686851470 c:\users\asusx\onedrive\escritorio\ayed\grafos\tdavector.h
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+
+1686872131 source:c:\users\asusx\onedrive\escritorio\ayed\grafos\grafos.c
+	"Grafos.h"
+
+1686852304 c:\users\asusx\onedrive\escritorio\ayed\grafos\grafos.h
+	<stdio.h>
+	<stdlib.h>
+	"TDAMatrix.h"
+	"TDAVector.h"
+

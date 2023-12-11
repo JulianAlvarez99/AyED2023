@@ -1,0 +1,55 @@
+#define t_ntn_elem int
+#define t_vector_elem int
+#define t_queue_elem ntn*
+
+typedef struct _ntn ntn;
+
+typedef struct _t_list
+{
+	ntn* node;
+	struct _t_list* next;
+}t_list;
+
+typedef struct _ntn
+{
+	t_ntn_elem value;
+	t_list* sons;
+}ntn;
+
+
+vector* level_count(ntn* root)
+{
+	if(root == NULL) return;
+
+	queue* nodes_bus = queue_new(); 			// se crea una cola auxiliar para llevar el control de los nodos del arbol n-ario
+	vector* lvl_vector = vector_new();			// se crea unn vector para almacenar la cantidad de nodos por nivel
+	int parents_count = 0;					// contador de padres
+	int childs_count = 0;					// contador de hijos
+
+	vector_add(lvl_vector, 1); 				// se setea el nivel 0 con 1 ya que solo existe un nodo como raiz
+
+	enqueue(nodes_bus, root);				// se encola el nodo raiz
+	parents_count = queue_getsize(nodes_bus);		// se setea el contador de padres con el tamaño de la queue, 1 en este caso (la raiz)
+
+	while(!queue_isempty(nodes_bus))
+	{
+		root = (ntn*)dequeue(nodes_bus);
+		parents_count--;
+		t_list *list_aux = root->sons;			// se pasa la lista de los hijos del nodo que se sacó de la cola en la linea 35
+		
+		while(list_aux != NULL)
+		{	
+			enqueue(nodes_bus,list_aux->node);	// se encolan los hijos dentro de la cola hasta que la lista sea nula
+			list_aux = list_aux->next;
+		}
+		childs_count = queue_getsize(nodes_bus);	// se pasa el tamaño de la cola al contador de hijos
+	
+		if(parents_count == 0 && childs_count != 0)	// Si el contador de padres es igual a 0 y el contador de hijos distinto de 0, agrego el contador de hijos
+		{						// al vector de nivel. Con el contador de padres llevo el control para determinar cuando se acaban los
+			vector_add(lvl_vector, childs_count);	// hijos del siguiente nivel. Como ejemplo, para el nivel 1 tengo los nodos  [1 3 4], por lo tanto en 
+			parents_count = childs_count;		// el nivel 1 tendré 3 nodos. A medida que quito los nodos padres de la cola voy agregando los hijos a la 		}						// cola también. Cuando saque el 1, se agrega 6 y 8, obteniendo [3 4 6 8] y asi hasta sacar  			}							// los padres 3 y 4. Una vez que se hayan quitado nos quedaria la cola con todos los nodos del 
+								// nivel 2 [6 8 2 4 2], obteniendo que en el nivel 2 hay 5 nodos, agregandolo al final del vector de nivel.
+	queue_free(nodes_bus);						 
+														
+ return (lvl_vector);
+}
