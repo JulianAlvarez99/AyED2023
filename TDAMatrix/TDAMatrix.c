@@ -15,6 +15,7 @@ matrix* matrix_new(int rows, int columns)
 
 //Elimina la matriz
 void matrix_free(matrix* m){
+    free(m->a);
     free(m);
 }
 
@@ -29,7 +30,7 @@ int matrix_columns(matrix* m)
     return m->columns;
 }
 
-//Obtener un elemento en una posición
+//Obtener un elemento en una posiciÃ³n
 void* matrix_get(matrix* m, int row, int col)
 {
     return m->a[row * m->columns + col];
