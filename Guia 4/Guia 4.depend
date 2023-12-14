@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1682652972 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guia 4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
