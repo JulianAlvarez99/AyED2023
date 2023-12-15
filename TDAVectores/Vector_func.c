@@ -4,7 +4,7 @@
 #include "Vector_func.h"
 
 /**
- * @brief Crea el vector vacÌo reservando el espacio en memoria. TamaÒo = 0, TamaÒo M·ximo = ini_size.
+ * @brief Crea el vector vac√≠o reservando el espacio en memoria. Tama√±o = 0, Tama√±o M√°ximo = ini_size.
  *
  * @param ini_size
  * @return vector*
@@ -20,8 +20,8 @@ vector_t* vector_new(int ini_size)
         exit(-12);
     }
     vector->Str = (void*)malloc(ini_size*sizeof(void*));        // reservar espacio en memoria para el arreglo de punteros
-    vector ->Size = 0;                                          // el tamaÒo actual del vector es cero
-    vector->MAX_size = ini_size;                                // el tamaÒo m·ximo del vector es el valor recibido como par·metro
+    vector ->Size = 0;                                          // el tama√±o actual del vector es cero
+    vector->MAX_size = ini_size;                                // el tama√±o m√°ximo del vector es el valor recibido como par√°metro
 
     return (vector);
 }
@@ -38,7 +38,7 @@ void vector_free(vector_t* v)
 }
 
 /**
- * @brief Permite obtener el tamaÒo actual del vector
+ * @brief Permite obtener el tama√±o actual del vector
  *
  * @param v
  * @return int
@@ -49,7 +49,7 @@ int vector_size(vector_t* v)
 }
 
 /**
- * @brief Devuelve 0 si no est· lleno y 1 si est· lleno.
+ * @brief Devuelve 0 si no est√° lleno y 1 si est√° lleno.
  *
  * @param v
  * @return int
@@ -60,7 +60,7 @@ int vector_isfull(vector_t* v)
 }
 
 /**
- * @brief Devuelve 0 si no est· vacÌo y 1 si est· vacÌo.
+ * @brief Devuelve 0 si no est√° vac√≠o y 1 si est√° vac√≠o.
  *
  * @param v
  * @return int
@@ -72,7 +72,7 @@ int vector_isempty(vector_t* v)
 
 
 /**
- * @brief Permite obtener el valor de una posiciÛn del vector
+ * @brief Permite obtener el valor de una posici√≥n del vector
  *
  * @param v
  * @param index
@@ -91,7 +91,7 @@ void* vector_get(vector_t* v, int index)
 
 
 /**
- * @brief Permite reemplazar el valor de una posiciÛn del vector
+ * @brief Permite reemplazar el valor de una posici√≥n del vector
  *
  * @param v
  * @param index
@@ -129,7 +129,7 @@ int vector_add(vector_t* v, void* value)
 
 
 /**
- * @brief Permite agregar un elemento en una posiciÛn determinada.Devuelve 0 si pudo agregarlo y 1 si no pudo.
+ * @brief Permite agregar un elemento en una posici√≥n determinada.Devuelve 0 si pudo agregarlo y 1 si no pudo.
  *
  * @param v
  * @param index
@@ -192,12 +192,22 @@ void* vector_remove(vector_t* v, int index)
  * @brief print the vector
  *
  */
-//void vector_print(vector_t* v, void (*print)(void*)){
-/*** COMPLETAR ***/
-//}
+void vector_print(vector_t* v, void print(void*))
+{
+    printf("\n\t");
+    for (int i = 0; i < vector_size(v); i++)
+    {
+       print(vector_get(v,i));
+    }
+    printf("\n");
+}
 
 /**
  * @brief print a vector of int*
  *
  */
-
+ void vprint_int(void* value)
+ {
+    printf("%d ", *(int*)value);
+    //printf("\n");
+ }
