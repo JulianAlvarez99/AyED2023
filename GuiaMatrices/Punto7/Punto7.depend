@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1702626362 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\main.c
+	"num_vector.h"
+	"matrix_num.h"
+	<time.h>
+
+1702622531 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\tdavector.c
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+	"TDAVector.h"
+
+1702598543 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\tdavector.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+
+1702599930 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\num_vector.c
+	"num_vector.h"
+
+1702599290 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\num_vector.h
+	"TDAVector.h"
+
+1702622097 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\matrix_num.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_num.h"
+
+1702622097 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\matrix_num.h
+	"TDAMatrix.h"
+
+1702622097 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\tdamatrix.h
+
+1702622097 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto7\tdamatrix.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TDAMatrix.h"
+

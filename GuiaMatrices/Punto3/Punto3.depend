@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1702593995 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"TDAMatrix.h"
+	"TDAVector.h"
+
+1702591678 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto3\tdamatrix.h
+
+1702591798 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto3\tdavector.h
+
+1702591678 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto3\tdamatrix.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TDAMatrix.h"
+
+1702592706 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto3\tdavector.c
+	<stdio.h>
+	<stdint.h>
+	<stdlib.h>
+	"TDAVector.h"
+

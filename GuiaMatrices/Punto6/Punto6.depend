@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1702596808 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto6\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"matrix_num.h"
+
+1702594915 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto6\tdamatrix.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"TDAMatrix.h"
+
+1702594915 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto6\tdamatrix.h
+
+1702597104 source:c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto6\matrix_num.c
+	<stdio.h>
+	<stdlib.h>
+	"matrix_num.h"
+
+1702594915 c:\users\julia\desktop\algoritmo y estructuras de datos\guiamatrices\punto6\matrix_num.h
+	"TDAMatrix.h"
+
