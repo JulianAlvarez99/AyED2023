@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1702708762 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdaqueue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"TDAQueue.h"
+
+1702708762 c:\users\julia\desktop\algoritmo y estructuras de datos\tdaqueue\tdaqueue.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+
+1702708806 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdaqueue\tdaqueue.c
+	"TDAQueue.h"
+

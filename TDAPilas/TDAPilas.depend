@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1682118590 source:c:\users\asusx\onedrive\escritorio\ayed\tdapilas\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1702707904 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdapilas\tdapilas.c
+	"TDAPilas.h"
+
+1702707703 c:\users\julia\desktop\algoritmo y estructuras de datos\tdapilas\tdapilas.h
+	<stdio.h>
+	<stdlib.h>
+
+1702707970 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdapilas\main.c
+	"TDAPilas.h"
+	<time.h>
+
