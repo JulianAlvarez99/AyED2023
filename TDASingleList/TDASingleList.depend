@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1702674800 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdasinglelist\tdasinglelist.c
+	"TDASingleList.h"
+
+1702672491 source:c:\users\julia\desktop\algoritmo y estructuras de datos\tdasinglelist\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1702678256 c:\users\julia\desktop\algoritmo y estructuras de datos\tdasinglelist\tdasinglelist.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+
