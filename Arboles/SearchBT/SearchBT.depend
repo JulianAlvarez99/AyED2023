@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1683918162 source:c:\users\asusx\onedrive\escritorio\ayed\searchbt\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"SBT.h"
+
+1683918301 source:c:\users\asusx\onedrive\escritorio\ayed\searchbt\sbt.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"SBT.h"
+
+1683917358 c:\users\asusx\onedrive\escritorio\ayed\searchbt\sbt.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1702849268 source:c:\users\asusx\onedrive\escritorio\ayed\arboles\searchbt\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"SBT.h"
+
+1702770513 c:\users\asusx\onedrive\escritorio\ayed\arboles\searchbt\sbt.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1702850074 source:c:\users\asusx\onedrive\escritorio\ayed\arboles\searchbt\sbt.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"SBT.h"
+

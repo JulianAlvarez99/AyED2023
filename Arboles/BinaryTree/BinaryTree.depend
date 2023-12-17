@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1683924579 source:c:\users\asusx\onedrive\escritorio\ayed\binarytree\main.c
+	"btree_base.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1683393388 c:\users\asusx\onedrive\escritorio\ayed\binarytree\btree_base.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"btree_base.h"
+
+1683924579 c:\users\asusx\onedrive\escritorio\ayed\binarytree\btree_base.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1683924765 source:c:\users\asusx\onedrive\escritorio\ayed\binarytree\btree_base.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"btree_base.h"
+
+1683869434 source:c:\users\julia\desktop\algoritmo y estructuras de datos\binarytree\main.c
+	"btree_base.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1683850713 c:\users\julia\desktop\algoritmo y estructuras de datos\binarytree\btree_base.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1683869405 source:c:\users\julia\desktop\algoritmo y estructuras de datos\binarytree\btree_base.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"btree_base.h"
+
+1702757261 source:c:\users\asusx\onedrive\escritorio\ayed\arboles\binarytree\main.c
+	"btree_base.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1683924579 c:\users\asusx\onedrive\escritorio\ayed\arboles\binarytree\btree_base.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1702756645 source:c:\users\asusx\onedrive\escritorio\ayed\arboles\binarytree\btree_base.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"btree_base.h"
+
