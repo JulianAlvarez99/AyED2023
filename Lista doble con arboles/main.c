@@ -31,7 +31,6 @@ int cmp_trees(btn* t1, btn* t2)
 
     if(t1->value == t2->value)
     {
-        result = 1;
         result = cmp_trees(t1->left,t2->left) && cmp_trees(t1->right, t2->right);
     }
     return result;
@@ -97,7 +96,7 @@ int drop_same_tree(list_node** l)
 }
 /***************************************************************************************/
 //********FUNCIONES AUXILIARES PARA TESTEAR**********//
-// Crear un ·rbol
+// Crear un √°rbol
 btn* create_tree(int value)
 {
     btn* node = (btn*)malloc(sizeof(btn));
@@ -123,7 +122,7 @@ int btn_insert_value(btn **node, int value)
 
     if(node == NULL)return 0;
 
-    if((*node)==NULL) // Si el sub·rbol es nulo, se agrega el nodo ahÌ
+    if((*node)==NULL) // Si el sub√°rbol es nulo, se agrega el nodo ah√≠
     {
         (*node) = create_tree(value);
         result = 1;
@@ -159,7 +158,7 @@ list_node* create_list_node(btn* tree)
 
 int main()
 {
-    // Crear algunos ·rboles y nodos de lista
+    // Crear algunos √°rboles y nodos de lista
     btn* tree1 = create_tree(1);
     btn* tree2 = create_tree(1);
     btn* tree3 = create_tree(2);
@@ -199,17 +198,17 @@ int main()
     node5->prev = node4;
     node5->next = NULL;
 
-    // Llamar a la funciÛn drop_same_tree
+    // Llamar a la funci√≥n drop_same_tree
     result = drop_same_tree(&node1);
 
-    // DespuÈs de la eliminaciÛn, la lista deberÌa contener solo el nodo con el ·rbol 1
-    // y los dem·s nodos y ·rboles deberÌan haber sido liberados
-    // y el resultado deberÌa ser 2 (dos nodos eliminados)
+    // Despu√©s de la eliminaci√≥n, la lista deber√≠a contener solo el nodo con el √°rbol 1
+    // y los dem√°s nodos y √°rboles deber√≠an haber sido liberados
+    // y el resultado deber√≠a ser 2 (dos nodos eliminados)
 
     // Comprobemos el resultado
     printf("Result: %d\n", result);
 
-    // Liberar la memoria restante (limpiar el ·rbol que queda)
+    // Liberar la memoria restante (limpiar el √°rbol que queda)
     free(node1);
 
     return 0;
