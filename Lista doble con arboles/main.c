@@ -101,11 +101,11 @@ int list_deleted_repeated(list_node** head, t_elem_list element)
     int result = 0;
     if (*head != NULL)
     {
-        result += list_deleted_repeted(&(*head)->next, element);
+        result += list_deleted_repeated(&(*head)->next, element);
         if (cmp_trees((*head)->value, element->value)!=0)
         {
             list_node* aux = *head;
-            list_node* aux2 = *(head)->prev;
+            list_node* aux2 = (*head)->prev;
             if(aux->next == NULL) //CASO EN EL QUE SE QUIERA BORRAR EL ULTIMO NODO
             {
                 aux2->next = NULL;
