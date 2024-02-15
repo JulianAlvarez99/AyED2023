@@ -48,7 +48,7 @@ void btn_free(btn** node)
     free(*node);
 }
 
-int list_delete_node(list_node** node, int deleted) // TAIL RECURSIVE METHOD
+/*int list_delete_node(list_node** node, int deleted) // TAIL RECURSIVE METHOD
 {
     if(!node) return -1;
 
@@ -93,7 +93,47 @@ int drop_same_tree(list_node** l)
     }
 
     return result;
+}*/
+
+//NEW VERSION!!!!!
+int list_deleted_repeated(list_node** head, t_elem_list element)
+{
+    int result = 0;
+    if (*head != NULL)
+    {
+        result += list_deleted_repeted(&(*head)->next, element);
+        if (cmp_trees((*head)->value, element->value)!=0)
+        {
+            list_node* aux = *head;
+            list_node* aux2 = *(head)->prev;
+            if(aux->next == NULL) //CASO EN EL QUE SE QUIERA BORRAR EL ULTIMO NODO
+            {
+                aux2->next = NULL;
+            }
+            else
+            {
+                aux2->next = aux->next;
+                aux->next->prev = aux2;
+            }
+            btn_free(&(aux->value));
+            free(aux);
+            aux = NULL;
+            result++;
+        }
+    }
+    return result;
 }
+
+int drop_same_tree(list_node ** head)
+{
+    int result = 0;
+    if(*head != NULL)
+    {
+        result = list_deleted_repeated(&(*head)->next, (*head)->value) + drop_same_tree(&(*head)->next);
+    }
+  return result;
+}
+
 /***************************************************************************************/
 //********FUNCIONES AUXILIARES PARA TESTEAR**********//
 // Crear un árbol
