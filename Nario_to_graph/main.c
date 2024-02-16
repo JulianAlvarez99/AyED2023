@@ -43,7 +43,7 @@ int cmp(t_graph_elem v1, t_graph_elem v2)
     return result;
 }
 
-void _tree_to_graph(btn* son, graph* g, btn* father)
+/*void _tree_to_graph(btn* son, graph* g, btn* father)
 {
     if(!son) return;
 
@@ -60,15 +60,35 @@ void _tree_to_graph(btn* son, graph* g, btn* father)
     _tree_to_graph(son->left,g,son);
     _tree_to_graph(son->right,g,son);
     graph_add_edge(g, father->value, son->value, 1);
-}
+}*/
 
+void _tree_to_graph(btn* root, graph* g, t_btn_elem father)
+{
+    if(!root) return;
+        
+    btn* son = root->left;
+    
+    while(son != NULL)
+    {
+        if(graph_vertex_index(g,son->value,cmp)<0) // SI DEVUELVE INDICE NEGATIVO, QUIERE DECIR QUE NO SE ENCUENTRA EN EL GRAFO
+        {
+             graph_add_vertex(g,son->value); //AGREGO VERTICE
+        }
+    graph_add_edge(g, father, son->value, 1);
+    _tree_to_graph(son,g,son->value);
+    son = son->right;
+    }
+}
 
 void tree_to_graph(btn* root, graph* g)
 {
     if(root != NULL)
     {
-        _tree_to_graph(root->left,g,root);
-        _tree_to_graph(root->right,g,root);
+        if(graph_vertex_index(g,root->value,cmp)<0) // SI DEVUELVE INDICE NEGATIVO, QUIERE DECIR QUE NO SE ENCUENTRA EN EL GRAFO
+        {
+                graph_add_vertex(g,root->value); //AGREGO VERTICE
+        }
+        _tree_to_graph(root,g,root->value);
     }
 }
 
