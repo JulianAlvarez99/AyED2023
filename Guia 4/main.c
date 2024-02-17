@@ -145,7 +145,7 @@ void sll_print(sll_node_t *head)
     }
 }
 
-/***** PUNTO 6 Dada una SSL de números enteros, obtener el valor mínimo******/
+/***** PUNTO 6 Dada una SSL de nÃºmeros enteros, obtener el valor mÃ­nimo******/
 sll_node_t* sll_min_value(sll_node_t* head)
 {
     sll_node_t* aux = head;
@@ -160,7 +160,7 @@ sll_node_t* sll_min_value(sll_node_t* head)
      return aux;
 }
 
-/*** PUNTO 7 Dividir una SSL de números enteros en 2 listas una con los números pares y otra con los impares. ***/
+/*** PUNTO 7 Dividir una SSL de nÃºmeros enteros en 2 listas una con los nÃºmeros pares y otra con los impares. ***/
 
 void sll_even_odd(sll_node_t* head, sll_node_t** even, sll_node_t** odd)
 {
@@ -177,6 +177,53 @@ void sll_even_odd(sll_node_t* head, sll_node_t** even, sll_node_t** odd)
             sll_even_odd(head->next,even,&(*odd)->next);
         }
     }
+}
+
+/***PUNTO 8 Recibir una SSL cuyo elemento es otra SSL de nÃºmeros enteros, obtener valor mÃ¡ximo del promedio mÃ¡ximo de las sub listas. ***/
+#define t_list_elem void* 
+/**MUCHO MUY IMPORTANTE, CON EL TIPO DE ELEMENTO COMO PUNTERO A VOID PUEDO MANEJAR CUALQUIER TIPO DE DATO ***/
+
+typedef struct _sll
+{
+    t_list_elem value;
+    struct _sll *next;
+}sll;
+
+
+float sll_Avg_list(sll* head)
+{
+    if(!head) return 0;
+    
+    int sum = 0;
+    int elements = 0;
+    
+    while(head != NULL)
+    {
+        sum += *((int*)head->value);
+        elements++;
+        head = head->next;
+    }
+  return sum/elements;
+}
+
+float sll_MaxAvg_of_sublist(sll** head)
+{
+    if(!(*head)) return 0;
+
+    sll *aux_list = *head;
+    float max = 0.0;
+    float witness = 0.0;
+
+    while(aux_list != NULL)
+    {
+        witness = sll_Avg_list((sll*)aux_list->value);
+        if(witness > max)
+        {
+		max = witness;
+	}
+	aux_list = aux_list->next;
+    }
+return max;
 }
 
 int main()
