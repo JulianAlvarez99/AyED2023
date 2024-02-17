@@ -132,3 +132,30 @@ void print_elem (t_elem e)
 {
     printf("%d\n", *(int*)e);
 }
+
+stack* stack_copy(stack* s)
+{
+  if(!s) return NULL;
+
+  stack* aux = stack_new();
+  stack* copy = stack_new();
+
+  t_elem value;
+  
+  while(!stack_isempty(s))
+  {  
+   value = pop(s);
+   push(aux, value);
+  }
+
+   while(!stack_isempty(aux))
+  {  
+   value = pop(aux);
+   push(s, value);
+   push(copy, value)
+  }
+  
+ stack_destroy(aux);
+
+return copy;
+}
