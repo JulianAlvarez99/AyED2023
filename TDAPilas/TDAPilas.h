@@ -41,5 +41,7 @@ void stack_destroy(stack* s);
 
 int stack_sum(stack* s);
 
+stack* stack_copy(stack* s);
+
 
 #endif // TDAPILAS_H_INCLUDED
