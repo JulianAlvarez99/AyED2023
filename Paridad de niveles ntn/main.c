@@ -82,6 +82,7 @@ int primer_nivel_par(ntn* root)
         {
             lvl = -1;
         }
+        queue_free(node_bus);
     }
     return lvl;
 }
