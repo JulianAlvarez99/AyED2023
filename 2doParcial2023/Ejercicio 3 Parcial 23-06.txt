@@ -47,7 +47,9 @@ vector* level_count(ntn* root)
 		if(parents_count == 0 && childs_count != 0)	// Si el contador de padres es igual a 0 y el contador de hijos distinto de 0, agrego el contador de hijos
 		{						// al vector de nivel. Con el contador de padres llevo el control para determinar cuando se acaban los
 			vector_add(lvl_vector, childs_count);	// hijos del siguiente nivel. Como ejemplo, para el nivel 1 tengo los nodos  [1 3 4], por lo tanto en 
-			parents_count = childs_count;		// el nivel 1 tendré 3 nodos. A medida que quito los nodos padres de la cola voy agregando los hijos a la 		}						// cola también. Cuando saque el 1, se agrega 6 y 8, obteniendo [3 4 6 8] y asi hasta sacar  			}							// los padres 3 y 4. Una vez que se hayan quitado nos quedaria la cola con todos los nodos del 
+			parents_count = childs_count;		// el nivel 1 tendré 3 nodos. A medida que quito los nodos padres de la cola voy agregando los hijos a la 		
+		}						// cola también. Cuando saque el 1, se agrega 6 y 8, obteniendo [3 4 6 8] y asi hasta sacar  			
+	}							// los padres 3 y 4. Una vez que se hayan quitado nos quedaria la cola con todos los nodos del 
 								// nivel 2 [6 8 2 4 2], obteniendo que en el nivel 2 hay 5 nodos, agregandolo al final del vector de nivel.
 	queue_free(nodes_bus);						 
 														
